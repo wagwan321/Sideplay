@@ -54,7 +54,10 @@
         <h3 class="item-name">${esc(p.n)}</h3>
         <p class="item-brand">${p.b ? esc(p.b) + " · " : ""}<span class="item-code">${esc(p.id)}</span></p>
         ${specs ? `<ul class="item-specs">${specs}</ul>` : ""}
-        <a class="item-order" href="${waLink(orderText(p, colourList(p)[0]))}" target="_blank" rel="noopener" aria-label="Order ${esc(p.n)} on WhatsApp">${ICON_WA}<span>Order<span class="ow"> on WhatsApp</span></span></a>
+        <div class="item-foot">
+          <span class="item-price${price ? "" : " ask"}">${price || "Ask price"}</span>
+          <a class="item-order" href="${waLink(orderText(p, colourList(p)[0]))}" target="_blank" rel="noopener" aria-label="Order ${esc(p.n)} on WhatsApp">${ICON_WA}<span>Order<span class="ow"> on WhatsApp</span></span></a>
+        </div>
       </div>
     </article>`;
   };
@@ -197,6 +200,36 @@
     history.replaceState(null, "", "#shop");
     $("#shop").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
   });
+  /* phone tab bar + departments sheet + header search */
+  const aisleSheet = $("#aisle-sheet");
+  const goSearch = () => {
+    $("#shop").scrollIntoView({ behavior: REDUCED ? "auto" : "smooth", block: "start" });
+    setTimeout(() => $("#q")?.focus({ preventScroll: true }), REDUCED ? 0 : 450);
+  };
+  document.addEventListener("click", (e) => {
+    const t = e.target.closest("[data-act]");
+    if (!t) return;
+    const act = t.dataset.act;
+    if (act === "search") { e.preventDefault(); aisleSheet?.open && aisleSheet.close(); goSearch(); }
+    if (act === "aisles") { e.preventDefault(); aisleSheet?.showModal(); }
+    if (act === "close-aisles") { e.preventDefault(); aisleSheet?.close(); }
+  });
+  aisleSheet?.addEventListener("click", (e) => {
+    const d = e.target.closest("[data-dept]");
+    if (d) {
+      e.preventDefault(); e.stopPropagation();
+      aisleSheet.close();
+      setTimeout(() => { setDept(d.dataset.dept, true); history.replaceState(null, "", "#d/" + d.dataset.dept); }, 60);
+    } else if (e.target === aisleSheet) aisleSheet.close();
+  });
+  const tabs = $$(".tabbar [data-tab]");
+  const markTab = () => {
+    const shopTop = $("#shop")?.getBoundingClientRect().top ?? 1e9;
+    const on = shopTop < innerHeight * 0.5 ? "shop" : "home";
+    tabs.forEach((t) => t.classList.toggle("active", t.dataset.tab === on));
+  };
+  addEventListener("scroll", markTab, { passive: true }); markTab();
+
   const fab = $(".fab"), finder = $(".sign");
   if (fab && finder && "IntersectionObserver" in window) {
     new IntersectionObserver(([e]) => e.isIntersecting || e.boundingClientRect.top > 0 ? fab.setAttribute("data-hide", "") : fab.removeAttribute("data-hide")).observe(finder);

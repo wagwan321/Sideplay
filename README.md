@@ -10,9 +10,9 @@ Static site: no build step. Open `index.html` in a browser, or upload the whole 
 | `assets/css/styles.css` | All styling (colour tokens at the top) |
 | `assets/js/app.js` | Catalog, search, filters, product sheet, WhatsApp order messages |
 | `assets/data/products.js` | **The catalog: 174 items, prices, specs** |
-| `assets/products/` | Product photos (taken from the supplier price lists) |
+| `assets/catalog/` | Product photos (generated on Higgsfield from the supplier price-list photos) |
 | `assets/photos/` | Lifestyle photos (generated with Higgsfield) |
-| `assets/wall/` | Cut-out product photos hanging on the homepage wall |
+| `assets/comp/` | Homepage wall: products, hooks, wordmark and pegboard tile matched to the approved mockup |
 | `assets/brand/` | Logo crop and icons |
 
 ## Changing a price or product
@@ -20,7 +20,7 @@ Static site: no build step. Open `index.html` in a browser, or upload the whole 
 Edit `assets/data/products.js`. Each item looks like:
 
 ```js
-{"id":"B077","d":"basketball","n":"Adjustable stand, quick lift","b":"","p":525,"img":"assets/products/b077.webp", ...}
+{"id":"B077","d":"basketball","n":"Adjustable stand, quick lift","b":"","p":525,"img":"assets/catalog/b077.webp", ...}
 ```
 
 - `p` is the USD price. Use `null` to show "Price on WhatsApp".
