@@ -1,0 +1,128 @@
+{
+  "title": "Choose the visual world for SidePlay",
+  "question": "The roll assigned Dispatch Carton. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "kind": "assigned",
+      "label": "Dispatch Carton",
+      "kicker": "THE ROLL",
+      "lineage": "Stockroom cartons and shipping labels: the 'brown box with colorful poster' every catalog item ships in",
+      "thesis": "Every product is a labelled carton on SidePlay's shelf; ordering is printing its dispatch slip to WhatsApp.",
+      "palette": ["#0c0c0e", "#1d1d21", "#d81e2c", "#c4c9cf", "#f1f0ec"],
+      "materials": ["black corrugated board (kraft translated to the logo's black)", "thermal-printed labels with real barcodes", "red packing tape", "brushed-steel strapping"],
+      "viewport": "Red tape strip as nav; huge carton-marking headline; a shelf of seven department cartons with counts and from-prices; one featured label with barcode, price and Order on WhatsApp.",
+      "risk": "Reads as a warehouse, not play, unless real product photos and color carry the joy; carton marking must stay industrial, never army-stencil.",
+      "raised": [
+        {"from": "challenger-sixpack", "raise": "Every label carries the same fixed readout set (price, size, age/load, code) in the same position on every product."},
+        {"from": "challenger-teletext", "raise": "Every carton is addressable by its real item code: #JC-5320ST opens that product."},
+        {"from": "challenger-toyism", "raise": "A closed palette: tape red, steel, black board, label white. No other colour enters except product photos."},
+        {"from": "challenger-sewing", "raise": "Variants set as lettered views A/B/C; the chosen colour/size prints solid, the rest stay dashed."},
+        {"from": "challenger-zine", "raise": "Spec callouts drawn onto the product photo: a leader line from the label to the rim, wheel or capacity that matters."}
+      ],
+      "html": ".impeccable/mocks/decision/assigned.html",
+      "comp": ".impeccable/mocks/decision/assigned.png"
+    },
+    {
+      "id": "model-pick",
+      "kind": "pick",
+      "label": "Sports Hall",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "School and club sports halls: varnished floor, painted court lines, the wall scoreboard",
+      "thesis": "The store laid out as one court: each department is a zone painted on the floor, prices on the scoreboard.",
+      "palette": ["#0c0c0e", "#b9773f", "#d81e2c", "#f4f2ee", "#c4c9cf"],
+      "materials": ["varnished maple boards", "painted court lines", "LED scoreboard digits"],
+      "viewport": "Top-down court; the centre circle holds the headline, zones (key, baseline, sideline) hold departments; scoreboard header shows the WhatsApp number.",
+      "risk": "Familiar sporty move many sports stores reach for; the wood ground competes with the black logo.",
+      "html": ".impeccable/mocks/decision/model-pick.html",
+      "comp": ".impeccable/mocks/decision/model-pick.png"
+    },
+    {
+      "id": "challenger-zine", "kind": "challenger", "catalogId": "hand-drawn-zine-explainer",
+      "label": "Hand-drawn Zine", "verdict": "declined",
+      "lineage": "marker-drawn technical zines",
+      "thesis": "Products explained like a friend sketching on a napkin.",
+      "palette": ["#f4ecd8", "#111111", "#ffd23f", "#ff5c8a"], "materials": ["cream paper", "marker ink"],
+      "viewport": "Marker headline over a doodled scooter with arrows to its parts.",
+      "case": "Fuses poorly: cream paper erases the binding red/steel/black logo; shoppers want prices, not lessons.",
+      "kept": "Spec callouts drawn onto the product photo.",
+      "risk": "Childish for fitness and outdoor buyers.",
+      "hero": "https://impeccable.style/worlds/cards/hand-drawn-zine-explainer-hero.webp"
+    },
+    {
+      "id": "challenger-sixpack", "kind": "challenger", "catalogId": "signals-instruments-night-flight-six-pack",
+      "label": "Night Instrument Panel", "verdict": "declined",
+      "lineage": "aircraft six-pack gauges",
+      "thesis": "Six calm dials, each owning one truth.",
+      "palette": ["#0a0a0a", "#f2f2f2", "#5cff9d", "#ffb020"], "materials": ["matte panel", "luminous markings"],
+      "viewport": "Six departments as six gauges.",
+      "case": "Fuses poorly: nobody shops for goals and tents through gauges; clarity collapses.",
+      "kept": "A fixed readout set in the same position on every product.",
+      "risk": "Cold, technical, no play.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-night-flight-six-pack-hero.webp"
+    },
+    {
+      "id": "challenger-teletext", "kind": "challenger", "catalogId": "digital-design-canon-teletext-weather-mosaic",
+      "label": "Teletext Mosaic", "verdict": "declined",
+      "lineage": "broadcast teletext pages",
+      "thesis": "The catalog as numbered broadcast pages.",
+      "palette": ["#000000", "#ff0000", "#ffff00", "#00ffff", "#ffffff"], "materials": ["block mosaic", "character grid"],
+      "viewport": "P100 index, departments as page numbers.",
+      "case": "Fuses partly (item codes as page numbers) but product photos cannot live in a block grid; loses clarity and identification.",
+      "kept": "Every product addressable by its item code.",
+      "risk": "Retro novelty.",
+      "hero": "https://impeccable.style/worlds/cards/digital-design-canon-teletext-weather-mosaic-hero.webp"
+    },
+    {
+      "id": "challenger-toyism", "kind": "challenger", "catalogId": "design-canon-toyism-signed-collective-plate",
+      "label": "Collective Plate", "verdict": "declined",
+      "lineage": "toyist collective paintings",
+      "thesis": "A shared symbol set in a fixed palette.",
+      "palette": ["#2340d8", "#e8288a", "#f5e43a", "#f5f2ea"], "materials": ["flat paint", "hard edges"],
+      "viewport": "Hard-edged figures floating over a flat ground.",
+      "case": "Fuses poorly: cobalt, magenta and lemon break the logo; art-gallery register.",
+      "kept": "A closed palette with no exceptions.",
+      "risk": "Off-brand.",
+      "hero": "https://impeccable.style/worlds/cards/design-canon-toyism-signed-collective-plate-hero.webp"
+    },
+    {
+      "id": "challenger-sewing", "kind": "challenger", "catalogId": "fashion-folded-worlds-sewing-pattern-envelope",
+      "label": "Pattern Envelope", "verdict": "declined",
+      "lineage": "home sewing pattern envelopes",
+      "thesis": "Views A, B, C and a size table on the back.",
+      "palette": ["#e8d9b5", "#111111", "#c8282e"], "materials": ["manila tissue", "drafting marks"],
+      "viewport": "Envelope front with lettered views of a product.",
+      "case": "Fuses poorly: a craft world foreign to sport.",
+      "kept": "Variants as lettered views, chosen one solid.",
+      "risk": "Wrong audience.",
+      "hero": "https://impeccable.style/worlds/cards/fashion-folded-worlds-sewing-pattern-envelope-hero.webp"
+    },
+    {
+      "id": "challenger-city", "kind": "challenger", "catalogId": "dream-surreal-impossible-worlds-sleeping-city-fold",
+      "label": "Sleeping City Fold", "verdict": "declined",
+      "lineage": "surreal dream maps",
+      "thesis": "A night city folding into a quilt.",
+      "palette": ["#141c3a", "#f2c84b", "#f3f0e8"], "materials": ["night navy", "embroidered lights"],
+      "viewport": "A quilted night city map.",
+      "case": "Fuses poorly: dreamy and slow where shoppers want price and action.",
+      "kept": "Departments read as districts of one continuous place.",
+      "risk": "Unclear offer.",
+      "hero": "https://impeccable.style/worlds/cards/dream-surreal-impossible-worlds-sleeping-city-fold-hero.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code", "toggle": true },
+  "canon": true,
+  "canonCard": {
+    "kind": "canon",
+    "label": "The category standard",
+    "thesis": "A dark sporty online store: action banner, category tiles, product grid, executed cleanly.",
+    "palette": ["#0c0c0e", "#ffffff", "#d81e2c"],
+    "materials": ["clean grid", "product photography"],
+    "viewport": "Full-width action banner with a headline and shop button, then a row of category tiles.",
+    "risk": "Indistinguishable from every other sports shop by design.",
+    "html": ".impeccable/mocks/decision/canon.html",
+    "comp": ".impeccable/mocks/decision/canon.png"
+  },
+  "steer": true
+}

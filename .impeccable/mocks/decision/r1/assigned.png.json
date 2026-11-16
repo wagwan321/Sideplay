@@ -1,0 +1,9 @@
+{
+ "prompt": "A desktop e-commerce homepage for SidePlay, a sports and play equipment store in Lebanon, rendered edge to edge as a finished website screen with crisp, readable text; no browser window, device or desk around it.\n\nThe visitor's job: find the gear, see its price, and order it in one WhatsApp message to 71 904 725. What leads is the shop's own display wall: a bright white perforated pegboard fills the first screen, and real products hang on red metal hooks at different heights: a black aluminium kick scooter, a tennis racket, an orange jump rope, a basketball ring with a red-white-blue net, a navy 60-litre hiking backpack. Each has a red paper swing tag on a string with its price: $150, $50, $10, $48, $135. A red aisle sign hanging from the top carries the headline \"GEAR FOR EVERY GAME.\" with the line \"174 items, prices on every tag. Order in one WhatsApp message.\" and a white search field \"What are you playing?\" with a red Find button. Below the wall, the start of the next section: a row of seven red aisle signs for the departments Rackets, Fitness, Basketball, Goals & Yard, Game Tables, Ride, Outdoor.\n\nFrame: the SidePlay logo (SP monogram with speed lines, SIDE in silver, PLAY in red) top left on a small black plate, department links, a red \"WhatsApp 71 904 725\" button at the right.\n\nVisual law: white pegboard and white paper as the ground, signal red for tags, hooks, signs and buttons, black only in small accents (the logo plate, prices printed on the tags). Heavy extended italic uppercase headlines like the logo lettering. Bright shop-floor daylight; no dark backgrounds.",
+ "model": "gpt_image_2_5 (Higgsfield, quality medium, 1k, 16:9)",
+ "references": [],
+ "round": "direction decision",
+ "approved": true,
+ "approvedAt": "2026-11-14T13:07:42.571149Z",
+ "approvedVia": "user in chat: \"Shop Wall\""
+}

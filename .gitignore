@@ -1,0 +1,13 @@
+# local tooling and design working files
+.claude/
+.impeccable/review/
+.impeccable/questions/
+.impeccable/mocks/worlds/
+.impeccable/config.local.json
+**/.edge-profile/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log

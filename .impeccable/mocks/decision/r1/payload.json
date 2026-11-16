@@ -1,0 +1,102 @@
+{
+  "title": "Pick SidePlay's new look",
+  "question": "Three real mockups, all red and white with small black accents. Pick the one to build, or re-roll for three new ones.",
+  "options": [
+    {
+      "id": "assigned",
+      "kind": "assigned",
+      "label": "Shop Wall",
+      "kicker": "THE ROLL",
+      "lineage": "The sports-shop display wall: white pegboard, red hooks, swing tags",
+      "thesis": "The homepage is SidePlay's own display wall: real products hang on red hooks, every one with its price on a swinging red tag.",
+      "palette": ["#ffffff", "#f3f3f1", "#d71f2b", "#111113"],
+      "materials": ["white perforated pegboard", "red metal hooks", "paper swing tags on string"],
+      "viewport": "Pegboard fills the first screen with scooter, racket, rope, rim and backpack hanging at different heights, each with a red price tag; a hanging red aisle sign holds the headline and search.",
+      "risk": "Busy if too many items hang at once; the wall must stay a few heroes, with the full catalog below.",
+      "raised": [
+        {"from": "challenger-papercut", "raise": "Depth only from overlap: tags, hooks and products are flat layers, no fake shading."},
+        {"from": "challenger-pushpin", "raise": "One hero product anchors each department section, smaller items orbit it."},
+        {"from": "challenger-nixie", "raise": "Counts change as visible events: filter counts and prices flip when they update."},
+        {"from": "challenger-brine", "raise": "Every tag carries the same banded facts in the same place: price, size, code."},
+        {"from": "challenger-room", "raise": "The wall stays whole at every size; panels restack around it on phones."}
+      ],
+      "comp": ".impeccable/mocks/decision/r1/assigned.png"
+    },
+    {
+      "id": "model-pick",
+      "kind": "pick",
+      "label": "Running Track",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "A red tartan running track seen from above",
+      "thesis": "Seven red track lanes are the seven departments; the white infield holds the headline, search and featured gear.",
+      "palette": ["#d71f2b", "#ffffff", "#b8141e", "#111113"],
+      "materials": ["red tartan track", "white lane lines and numbers"],
+      "viewport": "Lanes 1 to 7 sweep in a curve across the screen, each named for a department with its count and starting price; the infield holds headline, search and three priced products.",
+      "risk": "Sporty move many sports brands use; close in feel to the court you didn't like.",
+      "comp": ".impeccable/mocks/decision/r1/model-pick.png"
+    },
+    {
+      "id": "challenger-metro", "kind": "challenger", "catalogId": "digital-design-canon-metro-typographic-tiles",
+      "label": "Flat Tiles", "verdict": "competitive",
+      "lineage": "Metro-style flat tiles and giant cropped lowercase",
+      "thesis": "No decoration at all: giant words and flat red tiles; tiles flip to show products and prices.",
+      "palette": ["#ffffff", "#d71f2b", "#111113"],
+      "materials": ["flat colour tiles", "giant cropped type"],
+      "viewport": "Giant lowercase 'gear for every game' cropped off the right edge over a grid of flat red and white tiles holding departments and priced products.",
+      "case": "Fuses cleanly: departments become tiles and prices live on them; very clear, less sporty character.",
+      "risk": "Can feel like an app dashboard rather than a sports shop.",
+      "comp": ".impeccable/mocks/decision/r1/challenger-metro.png",
+      "hero": "https://impeccable.style/worlds/cards/digital-design-canon-metro-typographic-tiles-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/digital-design-canon-metro-typographic-tiles.webp"
+    },
+    {
+      "id": "challenger-brine", "kind": "challenger", "catalogId": "food-fermentation-culinary-theater-pickling-brine-calendar",
+      "label": "Brine Calendar", "verdict": "declined",
+      "thesis": "Seasonal pickling jars on shelves.", "palette": ["#eef3ee", "#e8735c", "#8a1f3a"], "materials": ["jar glass", "kraft labels"],
+      "viewport": "Jars on a shelf.", "case": "Fuses poorly: food world foreign to sport.", "kept": "The same banded facts on every label.", "risk": "Off-subject.",
+      "hero": "https://impeccable.style/worlds/cards/food-fermentation-culinary-theater-pickling-brine-calendar-hero.webp"
+    },
+    {
+      "id": "challenger-papercut", "kind": "challenger", "catalogId": "craft-making-lowicz-layered-papercut",
+      "label": "Layered Papercut", "verdict": "declined",
+      "thesis": "Flat paper layers pasted into a roundel.", "palette": ["#ffffff", "#e0262f", "#1f7a3a", "#f2c230"], "materials": ["glossy paper", "cut layers"],
+      "viewport": "A symmetrical roundel.", "case": "Fuses poorly: folk craft, not sport.", "kept": "Depth from overlap only, never shading.", "risk": "Decorative.",
+      "hero": "https://impeccable.style/worlds/cards/craft-making-lowicz-layered-papercut-hero.webp"
+    },
+    {
+      "id": "challenger-pushpin", "kind": "challenger", "catalogId": "brand-identity-canon-push-pin-poster",
+      "label": "Candy Poster", "verdict": "declined",
+      "thesis": "Nouveau poster in candy colours.", "palette": ["#f4ead8", "#ef7fa8", "#2bb3a8", "#111113"], "materials": ["poster stock", "flat candy fills"],
+      "viewport": "A silhouette with ribbon hair.", "case": "Fuses poorly: cream and candy colours break the red/white pin.", "kept": "One emblematic figure anchors each section.", "risk": "Off-palette.",
+      "hero": "https://impeccable.style/worlds/cards/brand-identity-canon-push-pin-poster-hero.webp"
+    },
+    {
+      "id": "challenger-nixie", "kind": "challenger", "catalogId": "signals-instruments-nixie-laboratory-counter",
+      "label": "Nixie Counter", "verdict": "declined",
+      "thesis": "Glowing orange tube digits.", "palette": ["#121212", "#ff7a1a", "#8a8f94"], "materials": ["glass tubes", "steel chassis"],
+      "viewport": "Banks of glowing digits.", "case": "Fuses poorly: dark lab instrument, the black you rejected.", "kept": "Number changes as visible events.", "risk": "Dark.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-nixie-laboratory-counter-hero.webp"
+    },
+    {
+      "id": "challenger-room", "kind": "challenger", "catalogId": "cyworld-minihompy-room",
+      "label": "Mini Room", "verdict": "declined",
+      "thesis": "A decoratable isometric pastel room.", "palette": ["#f6e9f0", "#bfe3f2", "#f7d774"], "materials": ["pastel tiles", "stickers"],
+      "viewport": "An isometric room.", "case": "Fuses poorly: pastel social profile, not a store.", "kept": "The scene stays whole at every size.", "risk": "Off-brand.",
+      "hero": "https://impeccable.style/worlds/cards/cyworld-minihompy-room-hero.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "comp", "toggle": true },
+  "canon": true,
+  "canonCard": {
+    "kind": "canon",
+    "label": "The category standard",
+    "thesis": "A clean white sports store: big action photo banner, category tiles, product grid, red buttons.",
+    "palette": ["#ffffff", "#d71f2b", "#111113"],
+    "materials": ["clean grid", "lifestyle photography"],
+    "viewport": "Full-width action photo with headline and Shop button, then a row of category tiles.",
+    "risk": "Looks like every other sports shop. (No mockup: credits only cover three.)",
+    "comp": ".impeccable/mocks/decision/r1/canon.png"
+  },
+  "steer": true
+}

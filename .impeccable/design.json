@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-14T00:00:00Z",
+  "title": "Design System: SidePlay",
+  "extensions": {
+    "colorMeta": {
+      "signal-red": { "role": "primary", "displayName": "Signal Red", "canonical": "#e3161b", "tonalRamp": ["#3d0507", "#640a0d", "#8f0d11", "#b70f14", "#e3161b", "#f2575a", "#f9a3a4", "#fde3e3"] },
+      "red-deep": { "role": "primary", "displayName": "Deep Red", "canonical": "#b70f14", "tonalRamp": ["#2e0405", "#4f0709", "#730a0e", "#b70f14", "#d8383c", "#ec7a7c", "#f6b8b9", "#fce8e8"] },
+      "red-ink": { "role": "primary", "displayName": "Red Ink", "canonical": "#c8101a", "tonalRamp": ["#340407", "#57070c", "#7e0a11", "#c8101a", "#e03a42", "#ef7c81", "#f8bbbe", "#fde9ea"] },
+      "pegboard": { "role": "neutral", "displayName": "Pegboard", "canonical": "#f2f2f3", "tonalRamp": ["#1c1c1f", "#38383c", "#5e5e64", "#85858b", "#acacb1", "#cdcdd1", "#e4e4e6", "#f2f2f3"] },
+      "peg-hole": { "role": "neutral", "displayName": "Peg Hole", "canonical": "#cdcdd1", "tonalRamp": ["#1c1c1f", "#38383c", "#5e5e64", "#85858b", "#acacb1", "#cdcdd1", "#e4e4e6", "#f2f2f3"] },
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#ffffff", "tonalRamp": ["#1c1c1f", "#3a3a3e", "#5f5f64", "#88888d", "#b1b1b5", "#d6d6d9", "#f2f2f3", "#ffffff"] },
+      "rule": { "role": "neutral", "displayName": "Rule", "canonical": "#e4e4e6", "tonalRamp": ["#1c1c1f", "#38383c", "#5e5e64", "#85858b", "#acacb1", "#d3d3d6", "#e4e4e6", "#f2f2f3"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#111113", "tonalRamp": ["#111113", "#2a2a2e", "#45464b", "#55565c", "#6b6c72", "#95969b", "#c4c4c8", "#ececee"] },
+      "ink-2": { "role": "neutral", "displayName": "Ink 2", "canonical": "#55565c", "tonalRamp": ["#111113", "#2a2a2e", "#45464b", "#55565c", "#6b6c72", "#95969b", "#c4c4c8", "#ececee"] },
+      "ink-3": { "role": "neutral", "displayName": "Ink 3", "canonical": "#6b6c72", "tonalRamp": ["#111113", "#2a2a2e", "#45464b", "#55565c", "#6b6c72", "#95969b", "#c4c4c8", "#ececee"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Section titles; 900 italic uppercase, wdth 112, word-spacing 0.12em, Red Ink on paper." },
+      "headline": { "displayName": "Headline", "purpose": "Lettering on the hanging hero sign, white on red; product-sheet name uses the same voice smaller." },
+      "price-tag": { "displayName": "Price Tag", "purpose": "Prices on swing tags; 900 italic, wdth 110. 'Price on WhatsApp' fallback drops to 800 upright 0.72rem." },
+      "title": { "displayName": "Title", "purpose": "Product names on cards." },
+      "body": { "displayName": "Body", "purpose": "Running text; how-to copy at 1.15rem capped at 34em." },
+      "label": { "displayName": "Label", "purpose": "Nav links, aisle signs, chips, footer headings; 800 italic uppercase, condensed wdth 90 to 92." },
+      "code": { "displayName": "Code", "purpose": "JetBrains Mono for item codes and the WhatsApp order message preview only." }
+    },
+    "shadows": [
+      { "name": "contact", "value": "0 18px 22px -14px rgba(17,17,19,.28)", "purpose": "Signs, poster captions and step tags hanging against the wall." },
+      { "name": "hook", "value": "filter: drop-shadow(3px 5px 2px rgba(17,17,19,.28))", "purpose": "Red hook on the wall; 2px 3px 1.5px on cards." },
+      { "name": "cut-out", "value": "filter: drop-shadow(0 16px 14px rgba(17,17,19,.2))", "purpose": "Hero products hanging on the pegboard." },
+      { "name": "tag", "value": "0 8px 12px -8px rgba(17,17,19,.45)", "purpose": "The swing tag." },
+      { "name": "card-lift", "value": "0 18px 30px -22px rgba(17,17,19,.45)", "purpose": "Product card on hover only." },
+      { "name": "sheet", "value": "-30px 0 80px rgba(17,17,19,.25)", "purpose": "Product sheet over a rgba(17,17,19,.4) backdrop." }
+    ],
+    "motion": [
+      { "name": "ease", "value": "cubic-bezier(.16, 1, .3, 1)", "purpose": "State transitions, underline grow, sheet entry, count flip." },
+      { "name": "hang", "value": "cubic-bezier(.37, 0, .63, 1)", "purpose": "Pendulum easing for every swing and the sign settle." },
+      { "name": "drop", "value": "translate 0 -46px to 0, .8s cubic-bezier(.2, .9, .3, 1), stagger .11s", "purpose": "Wall items dropping onto their hooks on first arrival." },
+      { "name": "swing", "value": "rotate around top-centre: amp, -.64, .38, -.2, .08 of amp over ~1.9s", "purpose": "Damped swing; amp 6deg on arrival, 3 to 6deg on view, pointer-driven up to 9deg, 7deg on sheet open." },
+      { "name": "tag-lag", "value": "2.3s, .08s delay, 1.6x amp first arc around a 7deg rest", "purpose": "Tag swings a beat behind its item." },
+      { "name": "settle", "value": "2.4s .2s hang: -2.5deg/-14px to 0 damped", "purpose": "Hero sign settling on its two hooks." },
+      { "name": "count-flip", "value": "perspective(200px) rotateX(-90deg) to 0, .55s ease", "purpose": "Result count when filters change." },
+      { "name": "reduced-motion", "value": "animation: none; transition: none", "purpose": "Everything hangs still under prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "phone", "value": "640px" },
+      { "name": "tablet", "value": "1000px" },
+      { "name": "nav-collapse", "value": "1240px" },
+      { "name": "sign-nowrap", "value": "1300px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Solid red action: Find, Order, Send on WhatsApp.",
+      "html": "<button class=\"ds-btn\">Order on WhatsApp</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: .55em; min-height: 48px; padding: 0 22px; border: 0; border-radius: 8px; background: var(--red, #e3161b); color: #fff; font-family: var(--f-sans, Archivo, 'Arial Narrow', sans-serif); font-weight: 800; font-size: 1rem; cursor: pointer; transition: background-color .2s cubic-bezier(.16,1,.3,1), transform .2s cubic-bezier(.16,1,.3,1); } .ds-btn:hover { background: var(--red-deep, #b70f14); } .ds-btn:active { transform: translateY(1px); } .ds-btn:focus-visible { outline: 3px solid var(--ink, #111113); outline-offset: 3px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action on paper; inverts to ink on hover.",
+      "html": "<button class=\"ds-btn-outline\">Browse the shop</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 22px; border: 0; border-radius: 8px; background: var(--paper, #fff); color: var(--ink, #111113); box-shadow: inset 0 0 0 2px var(--ink, #111113); font-family: var(--f-sans, Archivo, 'Arial Narrow', sans-serif); font-weight: 800; font-size: 1rem; cursor: pointer; transition: background-color .2s, color .2s; } .ds-btn-outline:hover { background: var(--ink, #111113); color: #fff; } .ds-btn-outline:focus-visible { outline: 3px solid var(--ink, #111113); outline-offset: 3px; }"
+    },
+    {
+      "name": "Swing Tag",
+      "kind": "custom",
+      "refersTo": "swing-tag",
+      "description": "The price hung on an item; swings on hover.",
+      "html": "<div class=\"ds-tag-wrap\"><span class=\"ds-tag\">$40</span></div>",
+      "css": ".ds-tag-wrap { position: relative; padding: 40px 30px; background: var(--peg, #f2f2f3); } .ds-tag { position: relative; display: inline-block; min-width: 50px; padding: 22px 9px 14px; text-align: center; background: var(--red, #e3161b); color: #fff; border-radius: 5px 5px 7px 7px; font-family: var(--f-sans, Archivo, sans-serif); font-weight: 900; font-style: italic; font-size: 1.3rem; line-height: 1; font-variation-settings: 'wdth' 110; rotate: 7deg; transform-origin: 50% -16px; box-shadow: 0 8px 12px -8px rgba(17,17,19,.45); transition: rotate .6s cubic-bezier(.37,0,.63,1); } .ds-tag::before { content: ''; position: absolute; top: 5px; left: 50%; width: 7px; height: 7px; margin-left: -3.5px; border-radius: 50%; background: var(--peg, #f2f2f3); box-shadow: inset 0 1px 1px rgba(0,0,0,.25); } .ds-tag::after { content: ''; position: absolute; bottom: calc(100% - 9px); left: 50%; width: 1.5px; height: 20px; background: #8e8e94; rotate: -18deg; transform-origin: bottom; } .ds-tag-wrap:hover .ds-tag { rotate: -4deg; } @media (prefers-reduced-motion: reduce) { .ds-tag { transition: none; } }"
+    },
+    {
+      "name": "Hanging Sign",
+      "kind": "custom",
+      "refersTo": "hanging-sign",
+      "description": "Red sign hung from two hooks with sign lettering and the finder.",
+      "html": "<div class=\"ds-sign-wall\"><div class=\"ds-sign\"><h1>Gear for every game.</h1><p>174 items, 167 priced on the tag.</p></div></div>",
+      "css": ".ds-sign-wall { padding: 40px 24px; background-color: var(--peg, #f2f2f3); background-image: radial-gradient(circle at 50% 38%, #5e5e64 0 1.2px, #85858b 1.9px, #c9c9ce 2.5px, rgba(255,255,255,.9) 3px, transparent 3.5px); background-size: 16px 16px; background-position: 8px 8px; } .ds-sign { position: relative; max-width: 560px; margin: 0 auto; padding: 24px 32px; text-align: center; background: var(--red, #e3161b); color: #fff; border-radius: 10px; box-shadow: 0 18px 22px -14px rgba(17,17,19,.28); } .ds-sign h1 { margin: 0; font-family: var(--f-sans, Archivo, sans-serif); font-weight: 900; font-style: italic; text-transform: uppercase; font-size: 2.4rem; line-height: .98; letter-spacing: 0; word-spacing: .14em; font-variation-settings: 'wdth' 100; } .ds-sign p { margin: 10px 0 0; font-weight: 500; }"
+    },
+    {
+      "name": "Aisle Sign",
+      "kind": "nav",
+      "refersTo": "aisle-sign",
+      "description": "Red chevron department sign with white line icon.",
+      "html": "<a class=\"ds-aisle\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"32\" height=\"32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M3 12h18M12 3v18M5.6 5.6c3.5 3.5 3.5 9.3 0 12.8M18.4 5.6c-3.5 3.5-3.5 9.3 0 12.8\"/></svg>Basketball</a>",
+      "css": ".ds-aisle { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; min-width: 160px; min-height: 88px; padding: 10px 24px 10px 10px; color: #fff; text-decoration: none; background: var(--red, #e3161b); border-radius: 8px 0 0 8px; clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%); font-family: var(--f-sans, Archivo, sans-serif); font-weight: 900; font-style: italic; text-transform: uppercase; font-size: 1rem; line-height: 1; font-variation-settings: 'wdth' 92; transition: background-color .2s, translate .35s cubic-bezier(.16,1,.3,1); } .ds-aisle:hover { background: var(--red-deep, #b70f14); translate: 0 -4px; } .ds-aisle:focus-visible { outline: 3px solid var(--ink, #111113); outline-offset: 3px; }"
+    },
+    {
+      "name": "Product Card",
+      "kind": "card",
+      "refersTo": "product-card",
+      "description": "A small piece of wall with the item hung on it, code, name, and red Order button.",
+      "html": "<article class=\"ds-item\"><div class=\"ds-item-wall\"><svg class=\"ds-hook\" viewBox=\"0 0 18 30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"><circle cx=\"9\" cy=\"4\" r=\"2.5\" fill=\"currentColor\"/><path d=\"M9 6v14a5 5 0 0 1-10 0\" transform=\"translate(5 0)\"/></svg><span class=\"ds-tag-mini\">$40</span></div><div class=\"ds-item-body\"><span class=\"ds-code\">RK-0142</span><h3>Junior tennis racket</h3><p>Head</p><a class=\"ds-order\" href=\"#\">Order</a></div></article>",
+      "css": ".ds-item { position: relative; width: 260px; display: flex; flex-direction: column; background: var(--paper, #fff); border: 1px solid var(--rule, #e4e4e6); border-radius: 12px; overflow: hidden; font-family: var(--f-sans, Archivo, sans-serif); color: var(--ink, #111113); transition: border-color .25s, box-shadow .3s cubic-bezier(.16,1,.3,1); } .ds-item:hover { border-color: #d3d3d6; box-shadow: 0 18px 30px -22px rgba(17,17,19,.45); } .ds-item-wall { position: relative; aspect-ratio: 4 / 3; display: flex; justify-content: center; padding-top: 4px; } .ds-hook { width: 18px; height: 30px; color: var(--red, #e3161b); filter: drop-shadow(2px 3px 1.5px rgba(17,17,19,.25)); } .ds-tag-mini { position: absolute; top: 14px; right: 14px; padding: 22px 9px 14px; min-width: 54px; text-align: center; background: var(--red, #e3161b); color: #fff; border-radius: 5px 5px 7px 7px; font-weight: 900; font-style: italic; font-size: 1.15rem; line-height: 1; rotate: 7deg; box-shadow: 0 8px 12px -8px rgba(17,17,19,.45); } .ds-item-body { display: flex; flex-direction: column; gap: 2px; padding: 12px 16px 16px; } .ds-code { font: 500 .74rem/1.2 var(--f-mono, 'JetBrains Mono', monospace); color: var(--ink-3, #6b6c72); } .ds-item-body h3 { margin: 2px 0 0; font-weight: 800; font-size: 1.04rem; line-height: 1.2; } .ds-item-body p { margin: 0; font-size: .84rem; color: var(--ink-2, #55565c); } .ds-order { display: flex; align-items: center; justify-content: center; min-height: 44px; margin-top: 14px; background: var(--red, #e3161b); color: #fff; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: .92rem; transition: background-color .2s; } .ds-order:hover { background: var(--red-deep, #b70f14); } .ds-order:focus-visible { outline: 3px solid var(--ink, #111113); outline-offset: 3px; }"
+    },
+    {
+      "name": "Filter Chip",
+      "kind": "chip",
+      "refersTo": "filter-chip",
+      "description": "Department filter pill; pressed state fills red.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip\" aria-pressed=\"true\">All</button><button class=\"ds-chip\" aria-pressed=\"false\">Rackets</button></div>",
+      "css": ".ds-chips { display: flex; gap: 8px; } .ds-chip { min-height: 40px; padding: 0 16px; border-radius: 999px; cursor: pointer; background: var(--paper, #fff); border: 2px solid var(--rule, #e4e4e6); color: var(--ink, #111113); font-family: var(--f-sans, Archivo, sans-serif); font-weight: 800; font-style: italic; text-transform: uppercase; font-size: .82rem; transition: border-color .2s, background-color .2s, color .2s; } .ds-chip:hover { border-color: var(--red, #e3161b); } .ds-chip[aria-pressed='true'] { background: var(--red, #e3161b); border-color: var(--red, #e3161b); color: #fff; } .ds-chip:focus-visible { outline: 3px solid var(--ink, #111113); outline-offset: 3px; }"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "Pegboard-filled search with leading icon; ink stroke on focus.",
+      "html": "<label class=\"ds-search\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"m20 20-3.5-3.5\"/></svg><input type=\"search\" placeholder=\"Search the shop\"></label>",
+      "css": ".ds-search { position: relative; display: block; max-width: 520px; } .ds-search svg { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--ink-3, #6b6c72); } .ds-search input { width: 100%; min-height: 44px; border-radius: 10px; background: var(--peg, #f2f2f3); border: 2px solid transparent; padding: 0 14px 0 42px; font: 400 1rem var(--f-sans, Archivo, sans-serif); color: var(--ink, #111113); } .ds-search input::placeholder { color: var(--ink-3, #6b6c72); } .ds-search input:focus-visible { outline: none; border-color: var(--ink, #111113); }"
+    },
+    {
+      "name": "Top Bar",
+      "kind": "nav",
+      "refersTo": "",
+      "description": "White sticky bar: logo on black plate, condensed italic links with red underline, red WhatsApp pill.",
+      "html": "<header class=\"ds-bar\"><span class=\"ds-plate\">SIDEPLAY</span><nav class=\"ds-nav\"><a href=\"#\" aria-current=\"true\">Rackets</a><a href=\"#\">Fitness</a></nav><a class=\"ds-wa\" href=\"#\">WhatsApp <span style=\"font-variant-numeric: tabular-nums\">71 904 725</span></a></header>",
+      "css": ".ds-bar { display: flex; align-items: center; gap: 28px; height: 72px; padding: 0 24px; background: var(--paper, #fff); border-bottom: 1px solid var(--rule, #e4e4e6); font-family: var(--f-sans, Archivo, sans-serif); } .ds-plate { background: var(--ink, #111113); color: var(--red, #e3161b); border-radius: 9px; padding: 12px 14px; font-weight: 900; font-style: italic; } .ds-nav { display: flex; gap: 24px; flex: 1; } .ds-nav a { position: relative; padding: 10px 0; text-decoration: none; color: var(--ink, #111113); font-weight: 800; font-style: italic; text-transform: uppercase; font-size: .9rem; font-variation-settings: 'wdth' 90; } .ds-nav a::after { content: ''; position: absolute; left: 0; right: 0; bottom: 4px; height: 3px; border-radius: 2px; background: var(--red, #e3161b); transform: scaleX(0); transform-origin: left; transition: transform .3s cubic-bezier(.16,1,.3,1); } .ds-nav a:hover::after, .ds-nav a[aria-current='true']::after { transform: scaleX(1); } .ds-nav a:focus-visible { outline: 3px solid var(--ink, #111113); outline-offset: 3px; } .ds-wa { display: inline-flex; align-items: center; gap: 9px; height: 48px; padding: 0 18px; background: var(--red, #e3161b); color: #fff; text-decoration: none; border-radius: 10px; font-weight: 800; font-style: italic; transition: background-color .2s; } .ds-wa:hover { background: var(--red-deep, #b70f14); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Shop Wall",
+    "overview": "The site is SidePlay's own display wall. White perforated pegboard is the ground; real products, cut out from the catalog photos, hang on red hooks; every price sits on a red swing tag tied to the item; signs hang from the wall and point down the aisles. The visitor is standing in front of the wall, not looking at a banner about a shop.\n\nThe palette is red and white, with black held to small accents: the logo plate, ink, the close button, focus rings. Type is one family, Archivo, pushed to heavy italic uppercase for anything that would be painted on a sign or tag, and set plainly for reading. Depth comes only from things hanging over the board: soft contact shadows and drop shadows under hooks and cut-outs. Nothing sits on a dark ground.\n\nMotion is physical and belongs to the hang. Items drop onto their hooks and swing out, damped, around the hook point; brushing the pointer across an item swings it in that direction; tags swing a beat behind the item; counts flip when filters change. Under reduced motion everything hangs still.",
+    "keyCharacteristics": [
+      "White pegboard (16px hole pitch) and white paper as the only grounds.",
+      "Signal red carries every hook, tag, sign, button and the footer.",
+      "Black is a small accent, never a surface larger than a logo plate or a close button.",
+      "Archivo alone: heavy italic uppercase for sign lettering, regular for reading; mono only for item codes and the order message.",
+      "Every product is hung: hook above, item rotating from its top-centre, tag at a fixed corner.",
+      "Swing physics is the signature interaction and is switched off entirely under reduced motion."
+    ],
+    "rules": [
+      { "name": "The Small Black Rule", "body": "Black appears only as small accents: the logo plate, text, the close button, the outline-button stroke and focus rings. No black section, band or card ground.", "section": "colors" },
+      { "name": "The Red Is Hardware Rule", "body": "Red fills belong to things that physically hang or are pressed: hooks, tags, signs, rails, buttons, chips. Red as text uses Red Ink (#c8101a), never Signal Red on white body copy.", "section": "colors" },
+      { "name": "The No Dark Ground Rule", "body": "Every surface is pegboard, paper, or signal red. There is no dark mode and no dark hero.", "section": "colors" },
+      { "name": "The Sign Lettering Rule", "body": "Anything that would be painted on a sign or tag is Archivo 900 italic uppercase with letter-spacing 0. Reading text is never italic.", "section": "typography" },
+      { "name": "The Mono Is Paperwork Rule", "body": "JetBrains Mono appears only on item codes and the outgoing WhatsApp message. Never on headings, prices or labels.", "section": "typography" },
+      { "name": "The Tabular Phone Rule", "body": "Phone numbers and live counts use tabular numerals so digits never jitter.", "section": "typography" },
+      { "name": "The Hung Not Floating Rule", "body": "A shadow exists only because something hangs in front of the wall or is lifted by the pointer. Shadows sit below their object with negative spread; nothing hovers in a halo.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do hang every product: red hook above, item pivoting from top-centre, swing tag at a fixed corner.",
+      "Do keep grounds to pegboard (#f2f2f3 with the 16px hole grid), paper (#ffffff) or signal red (#e3161b).",
+      "Do set sign and tag lettering in Archivo 900 italic uppercase, wdth 100 to 112, letter-spacing 0.",
+      "Do use Red Ink (#c8101a) for red text on white and Deep Red (#b70f14) for every red hover.",
+      "Do use the Contact shadow for anything hanging flat against the wall.",
+      "Do use tabular numerals for phone numbers and counts.",
+      "Do switch off every swing, drop, flip and transition under reduced motion."
+    ],
+    "donts": [
+      "Don't put any section, hero or card on a dark ground; black stays at logo-plate size or smaller.",
+      "Don't use a sports-shop photo banner in place of the wall of real, hung products.",
+      "Don't use JetBrains Mono outside item codes and the order message.",
+      "Don't set reading text in italic or uppercase.",
+      "Don't use hard offset shadows or glows; shadows sit below their object with negative spread.",
+      "Don't move a price off its swing tag or vary what a tag says from item to item."
+    ]
+  }
+}

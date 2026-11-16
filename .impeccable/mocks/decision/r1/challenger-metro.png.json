@@ -1,0 +1,9 @@
+{
+ "prompt": "A desktop e-commerce homepage for SidePlay, a sports and play equipment store in Lebanon, rendered edge to edge as a finished website screen with crisp, readable text; no browser window, device or desk around it.\n\nThe visitor's job: find the gear, see its price, and order it in one WhatsApp message to 71 904 725. What leads is giant lowercase type: \"gear for every game\" set huge across the top and cropped off the right edge, over a strict grid of flat square tiles. Tiles are the doors: seven department tiles (rackets, fitness, basketball, goals & yard, game tables, ride, outdoor) each with item count and starting price, mixed with product tiles showing a real product photo and its price: aluminium scooter $150, adjustable basketball stand $525, Fusiontec tennis racket $50, 65 cm gym ball $26, 2-person pop-up tent $148. One tile holds a search field \"what are you playing?\" and one large tile says \"order on whatsapp 71 904 725\". Below, the next pane's giant word \"the shop\" peeks in.\n\nFrame: the SidePlay logo (SP monogram with speed lines, SIDE in silver, PLAY in red) top left on a small black plate, a few text links, a WhatsApp 71 904 725 link at the right.\n\nThe attached references are style inspiration adapted into a real working product; do not copy their layout or content. The client pinned the palette: white ground with flat red tiles and white or red type, black only in small accents, no black background.",
+ "model": "gpt_image_2_5 (Higgsfield, quality medium, 1k, 16:9)",
+ "references": [
+  ".impeccable/mocks/worlds/digital-design-canon-metro-typographic-tiles-board.webp",
+  ".impeccable/mocks/worlds/digital-design-canon-metro-typographic-tiles-hero.webp"
+ ],
+ "round": "direction decision"
+}
